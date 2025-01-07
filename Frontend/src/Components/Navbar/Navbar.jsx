@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { FaDumbbell } from "react-icons/fa";
+import { FaShoppingBag } from "react-icons/fa";
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCartThin } from "react-icons/pi";
 import ResponsiveMenu from "./ResponsiveMenu";
@@ -38,12 +38,12 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="container flex justify-between items-center py-8">
+        <div className="container flex justify-between items-center py-4">
           {/* Logo Section */}
           <div className="text-2xl flex items-center gap-2 font-bold uppercase">
-            <FaDumbbell />
-            <p>Coders</p>
-            <p className="text-secondary">Gym</p>
+            <FaShoppingBag />
+            <p>Sanchita</p>
+            <p className="text-secondary">Enterprises</p>
           </div>
           {/* Menu Section */}
           <div className="hidden md:block">
