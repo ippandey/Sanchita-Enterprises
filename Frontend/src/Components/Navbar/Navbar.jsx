@@ -36,7 +36,7 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false);
   return (
-    <>
+    <section>
       <nav>
         <div className="container flex justify-between items-center py-4">
           {/* Logo Section */}
@@ -83,7 +83,7 @@ const Navbar = () => {
 
       {/* Mobile Sidebar section */}
       <ResponsiveMenu open={open} />
-    </>
+    </section>
   );
 };
 
