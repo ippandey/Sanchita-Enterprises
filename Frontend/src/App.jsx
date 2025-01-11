@@ -1,10 +1,12 @@
-import AboutParas from "./Components/AboutParas/AboutParas";
-import Carousel from "./Components/Carousel/Carousel";
-import Navbar from "./Components/Navbar/Navbar";
-import NewArrivals from "./Components/NewArrivals/NewArrivals";
-import ShopByCategories from "./Components/ShopByCategories/ShopByCategories";
-import TextTicker from "./Components/TextTicker/TextTicker";
-import Banner from "./Components/Banner/Banner";
+import AboutParas from "./Components/HomePage/AboutParas/AboutParas";
+import Carousel from "./Components/HomePage/Carousel/Carousel";
+import Navbar from "./Components/HomePage/Navbar/Navbar";
+import NewArrivals from "./Components/HomePage/NewArrivals/NewArrivals";
+import ShopByCategories from "./Components/HomePage/ShopByCategories/ShopByCategories";
+import TextTicker from "./Components/HomePage/TextTicker/TextTicker";
+import Banner from "./Components/HomePage/Banner/Banner";
+import BestSeller from "./Components/HomePage/BestSeller/BestSeller";
+import BigBanners from "./Components/HomePage/BigBanners/BigBanners";
 
 function App() {
   return (
@@ -29,6 +31,12 @@ function App() {
 
       {/* Banner Section */}
       <Banner />
+
+      {/* Best Seller Section */}
+      <BestSeller />
+
+      {/* Big Banner Section */}
+      <BigBanners />
     </>
   );
 }

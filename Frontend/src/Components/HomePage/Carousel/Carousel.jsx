@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import carousel_pic1 from "./../../assets/carousel_pic1.jpg";
-import carousel_pic2 from "./../../assets/carousel_pic2.webp";
+import carousel_pic1 from "./../../../assets/carousel_pic1.jpg";
+import carousel_pic2 from "./../../../assets/carousel_pic2.webp";
 import { FiChevronLeft } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "motion/react";

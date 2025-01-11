@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import ticker_img from "./../../assets/ticker_img.webp";
+import ticker_img from "./../../../assets/ticker_img.webp";
 
 const TextTicker = () => {
   const TextMessages = [

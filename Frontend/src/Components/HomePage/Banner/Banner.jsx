@@ -1,9 +1,9 @@
 import React from "react";
-import banner from "./../../assets/banner.webp";
+import banner from "./../../../assets/banner.webp";
 
 const Banner = () => {
   return (
-    <section className="overflow-hidden">
+    <section>
       <div className="relative">
         <img src={banner} alt="Banner" className="w-full h-auto" />
         <div className="absolute right-16 top-36 bg-white h-1/2 w-2/5 p-9">
