@@ -73,9 +73,9 @@ const NewArrivals = () => {
 
         {/* Products section */}
         <div className="h-80 flex gap-5">
-          {NewArrivalsCard.map((item) => (
-            <div className="h-full w-52 bg-[#f7f4f3]">
-              <img id={item.id} src={item.img1} className="" />
+          {NewArrivalsCard.map((item, index) => (
+            <div key={index} className="h-full w-52 bg-[#f7f4f3]">
+              <img src={item.img1} className="" />
               <p
                 className="uppercase text-sm 
                    text-gray-500 text-center"

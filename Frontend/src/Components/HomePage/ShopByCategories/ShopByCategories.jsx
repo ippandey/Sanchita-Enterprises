@@ -48,10 +48,9 @@ const ShopByCategories = () => {
 
         {/* Images Section */}
         <div className="h-72 flex gap-4">
-          {CategoryList.map((item) => (
-            <div className="overflow-hidden relative">
+          {CategoryList.map((item, index) => (
+            <div key={index} className="overflow-hidden relative">
               <motion.img
-                key={item.id}
                 src={item.img}
                 alt={item.title}
                 whileHover={{ scale: 1.05 }}

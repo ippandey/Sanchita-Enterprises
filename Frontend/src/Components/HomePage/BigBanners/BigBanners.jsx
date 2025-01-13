@@ -14,7 +14,6 @@ const BigBanners = () => {
             alt="BigPic1"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className=""
           />
           <div className="absolute bottom-6 left-6 p-5">
             <h3 className="text-4xl text-white font-medium pb-3">

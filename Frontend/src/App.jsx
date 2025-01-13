@@ -1,12 +1,18 @@
 import AboutParas from "./Components/HomePage/AboutParas/AboutParas";
 import Carousel from "./Components/HomePage/Carousel/Carousel";
-import Navbar from "./Components/HomePage/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import NewArrivals from "./Components/HomePage/NewArrivals/NewArrivals";
 import ShopByCategories from "./Components/HomePage/ShopByCategories/ShopByCategories";
 import TextTicker from "./Components/HomePage/TextTicker/TextTicker";
 import Banner from "./Components/HomePage/Banner/Banner";
 import BestSeller from "./Components/HomePage/BestSeller/BestSeller";
 import BigBanners from "./Components/HomePage/BigBanners/BigBanners";
+import Essentials from "./Components/HomePage/Essentials/Essentials";
+import OurStory from "./Components/HomePage/OurStory/OurStory";
+import Blogs from "./Components/HomePage/Blogs/Blogs";
+import Testimonials from "./Components/HomePage/Testimonials/Testimonials";
+import FAQ from "./Components/HomePage/FAQ/FAQ";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -37,6 +43,24 @@ function App() {
 
       {/* Big Banner Section */}
       <BigBanners />
+
+      {/* Essentials Section */}
+      <Essentials />
+
+      {/* Our Story Section */}
+      <OurStory />
+
+      {/* Blogs Section */}
+      <Blogs />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      {/* Footer Section */}
+      <Footer />
     </>
   );
 }

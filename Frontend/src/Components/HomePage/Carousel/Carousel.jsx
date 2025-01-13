@@ -5,17 +5,18 @@ import { FiChevronLeft } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "motion/react";
 
+const slides = [
+  {
+    id: 1,
+    name: carousel_pic1,
+  },
+  {
+    id: 2,
+    name: carousel_pic2,
+  },
+];
+
 const Carousel = () => {
-  const slides = [
-    {
-      id: 1,
-      name: carousel_pic1,
-    },
-    {
-      id: 2,
-      name: carousel_pic2,
-    },
-  ];
   const [curr, setCurr] = useState(0);
   const prev = () => {
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
@@ -40,9 +41,9 @@ const Carousel = () => {
           className="relative flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${curr * 100}%)` }}
         >
-          {slides.map((item) => (
+          {slides.map((item, index) => (
             <motion.img
-              key={item.id}
+              key={index}
               src={item.name}
               alt={`Slide ${item.id}`}
               className="w-full h-full object-cover  top-0 left-0"
@@ -76,7 +77,10 @@ const Carousel = () => {
         <div className="absolute bottom-3 right-0 left-0">
           <div className="flex items-center justify-center gap-2 ">
             {slides.map((_, i) => (
-              <div className="w-16 h-[2px] bg-gray-400 relative overflow-hidden">
+              <div
+                key={i}
+                className="w-16 h-[2px] bg-gray-400 relative overflow-hidden"
+              >
                 {/* Active slider animation */}
                 {curr === i && (
                   <motion.div

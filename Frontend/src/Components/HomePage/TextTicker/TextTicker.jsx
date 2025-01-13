@@ -24,8 +24,8 @@ const TextTicker = () => {
   return (
     <section className="h-20 bg-[#c08b75] flex items-center justify-center">
       <Marquee speed={100}>
-        {TextMessages.map((item) => (
-          <div className="flex items-center justify-center mr-32">
+        {TextMessages.map((item, index) => (
+          <div key={index} className="flex items-center justify-center mr-32">
             <img src={ticker_img} alt="" className="text-center w-10 h-10" />
             <p
               key={item.id}
