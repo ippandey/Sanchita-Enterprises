@@ -17,6 +17,10 @@ export default {
           "2xl": "6rem",
         },
       },
+      fontFamily: {
+        work: ['"Work Sans"', "sans-serif"],
+        cormorant: ["Cormorant", "serif"],
+      },
     },
   },
   plugins: [],

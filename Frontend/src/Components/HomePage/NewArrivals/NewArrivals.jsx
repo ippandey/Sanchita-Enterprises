@@ -65,10 +65,12 @@ const NewArrivals = () => {
       <div className="m-20">
         {/* Heading section */}
         <div className="mb-8">
-          <p className="text-[#7e7e84] font-semibold uppercase mb-4">
+          <p className="text-[#7e7e84] font-work text-sm uppercase mb-4">
             New Arrivals
           </p>
-          <h1 className="text-4xl">Shop Top Sellers</h1>
+          <h1 className="text-[44px] font-cormorant capitalize text-[#202025]">
+            Shop Top Sellers
+          </h1>
         </div>
 
         {/* Products section */}

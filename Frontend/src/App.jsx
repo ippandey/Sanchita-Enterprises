@@ -1,5 +1,4 @@
 import AboutParas from "./Components/HomePage/AboutParas/AboutParas";
-import Carousel from "./Components/HomePage/Carousel/Carousel";
 import Navbar from "./Components/Navbar/Navbar";
 import NewArrivals from "./Components/HomePage/NewArrivals/NewArrivals";
 import ShopByCategories from "./Components/HomePage/ShopByCategories/ShopByCategories";
@@ -13,6 +12,7 @@ import Blogs from "./Components/HomePage/Blogs/Blogs";
 import Testimonials from "./Components/HomePage/Testimonials/Testimonials";
 import FAQ from "./Components/HomePage/FAQ/FAQ";
 import Footer from "./Components/Footer/Footer";
+import ImageSlider from "./Components/HomePage/ImageSlider/ImageSlider";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
       {/* Navbar Section*/}
       <Navbar />
 
-      {/* Carousel Section*/}
-      <Carousel />
+      {/* Image Slider Section*/}
+      <ImageSlider />
 
       {/* Text Ticker/Marquee Section*/}
       <TextTicker />
