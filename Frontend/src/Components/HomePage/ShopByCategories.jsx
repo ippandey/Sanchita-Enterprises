@@ -1,5 +1,5 @@
 import React from "react";
-import category_pic from "./../../../assets/category_pic.webp";
+import category_pic from "./../../assets/category_pic.webp";
 import { motion } from "motion/react";
 
 const ShopByCategories = () => {

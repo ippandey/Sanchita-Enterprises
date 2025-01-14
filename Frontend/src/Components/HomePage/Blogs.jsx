@@ -1,7 +1,7 @@
 import React from "react";
-import blog_pic1 from "./../../../assets/blog_pic1.webp";
-import blog_pic2 from "./../../../assets/blog_pic2.webp";
-import blog_pic3 from "./../../../assets/blog_pic3.webp";
+import blog_pic1 from "./../../assets/blog_pic1.webp";
+import blog_pic2 from "./../../assets/blog_pic2.webp";
+import blog_pic3 from "./../../assets/blog_pic3.webp";
 import { motion } from "motion/react";
 
 const BlogCards = [

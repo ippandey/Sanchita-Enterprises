@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import prod1_1 from "./../../../assets/prod1_1.webp";
-import prod1_2 from "./../../../assets/prod1_2.webp";
+import prod1_1 from "./../../assets/prod1_1.webp";
+import prod1_2 from "./../../assets/prod1_2.webp";
 
 const categories = [
   {

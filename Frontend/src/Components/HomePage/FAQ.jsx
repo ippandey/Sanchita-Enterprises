@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import faq_pic from "./../../../assets/faq_pic.webp";
+import faq_pic from "./../../assets/faq_pic.webp";
 
 const FAQ = () => {
   const faqs = [

@@ -1,6 +1,6 @@
 import React from "react";
-import bigpic1 from "./../../../assets/bigpic1.webp";
-import bigpic2 from "./../../../assets/bigpic2.webp";
+import bigpic1 from "./../../assets/bigpic1.webp";
+import bigpic2 from "./../../assets/bigpic2.webp";
 import { motion } from "motion/react";
 
 const BigBanners = () => {

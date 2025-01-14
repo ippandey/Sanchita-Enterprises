@@ -1,9 +1,9 @@
 import React from "react";
-import prod1_1 from "./../../../assets/prod1_1.webp";
-import prod1_2 from "./../../../assets/prod1_2.webp";
+import prod1_1 from "./../../assets/prod1_1.webp";
+import prod1_2 from "./../../assets/prod1_2.webp";
 
-const NewArrivals = () => {
-  const NewArrivalsCard = [
+const BestSeller = () => {
+  const BestSellerCard = [
     {
       id: 1,
       img1: prod1_1,
@@ -65,17 +65,15 @@ const NewArrivals = () => {
       <div className="m-20">
         {/* Heading section */}
         <div className="mb-8">
-          <p className="text-[#7e7e84] font-work text-sm uppercase mb-4">
-            New Arrivals
+          <p className="text-[#7e7e84] font-semibold uppercase mb-4">
+            Angel Skin
           </p>
-          <h1 className="text-[44px] font-cormorant capitalize text-[#202025]">
-            Shop Top Sellers
-          </h1>
+          <h1 className="text-4xl">Best Seller Skin</h1>
         </div>
 
         {/* Products section */}
         <div className="h-80 flex gap-5">
-          {NewArrivalsCard.map((item, index) => (
+          {BestSellerCard.map((item, index) => (
             <div key={index} className="h-full w-52 bg-[#f7f4f3]">
               <img src={item.img1} className="" />
               <p
@@ -88,9 +86,9 @@ const NewArrivals = () => {
               <p className="text-center">{item.stars}</p>
               <p className="flex items-center justify-center gap-2">
                 ${item.price}
-                <p className="text-gray-500 line-through">
+                <span className="text-gray-500 line-through">
                   ${item.originalPrice}
-                </p>
+                </span>
               </p>
             </div>
           ))}
@@ -100,4 +98,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default BestSeller;
