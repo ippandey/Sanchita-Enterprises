@@ -1,13 +1,13 @@
 import React from "react";
-import prod1_1 from "./../../assets/prod1_1.webp";
-import prod1_2 from "./../../assets/prod1_2.webp";
+import ProdPics1 from "./../../assets/ProdPics1.jpg";
+import ProdPics2 from "./../../assets/ProdPics2.jpg";
 
 const NewArrivals = () => {
   const NewArrivalsCard = [
     {
       id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
+      img1: ProdPics2,
+      img2: ProdPics2,
       title: "Versed Skin",
       productName: "Total Transformation",
       stars: 2,
@@ -17,8 +17,8 @@ const NewArrivals = () => {
     },
     {
       id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
+      img1: ProdPics2,
+      img2: ProdPics2,
       title: "Versed Skin",
       productName: "Total Transformation",
       stars: 2,
@@ -28,8 +28,8 @@ const NewArrivals = () => {
     },
     {
       id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
+      img1: ProdPics1,
+      img2: ProdPics2,
       title: "Versed Skin",
       productName: "Total Transformation",
       stars: 2,
@@ -39,8 +39,8 @@ const NewArrivals = () => {
     },
     {
       id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
+      img1: ProdPics1,
+      img2: ProdPics2,
       title: "Versed Skin",
       productName: "Total Transformation",
       stars: 2,
@@ -50,8 +50,8 @@ const NewArrivals = () => {
     },
     {
       id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
+      img1: ProdPics1,
+      img2: ProdPics2,
       title: "Versed Skin",
       productName: "Total Transformation",
       stars: 2,

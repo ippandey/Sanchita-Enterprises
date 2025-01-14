@@ -30,22 +30,20 @@ const FAQ = () => {
     },
   ];
 
-  // State to manage the open FAQ
   const [openIndex, setOpenIndex] = useState(0);
 
-  // Toggle FAQ function
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index); // Close if already open, else open
+    setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <section className="relative border-b border-gray-800">
+    <section className="border-b border-gray-800">
       {/* Heading section */}
       <div className="m-20">
         <div className="mb-8">
-          <p className="text-[#7e7e84] font-semibold uppercase mb-4">
-            Angel Skin
-          </p>
-          <h1 className="text-4xl">Best Seller Skin</h1>
+          <p className="text-[#7e7e84] font-work uppercase mb-4">faqs</p>
+          <h1 className="text-[44px] box-border font-thin capitalize font-cormorant">
+            Frequently Asked Questions
+          </h1>
         </div>
 
         {/* Main Content */}
@@ -64,7 +62,9 @@ const FAQ = () => {
                   onClick={() => toggleFAQ(index)}
                 >
                   {/* Question */}
-                  <h3 className="text-3xl font-light">{faq.question}</h3>
+                  <h3 className="text-[28px] italic font-cormorant">
+                    {faq.question}
+                  </h3>
                   {/* Toggle Icon */}
                   <button className="text-xl font-bold text-gray-600">
                     {openIndex === index ? "-" : "+"}
@@ -72,7 +72,7 @@ const FAQ = () => {
                 </div>
                 {/* Answer */}
                 {openIndex === index && (
-                  <p className=" text-gray-600 my-5">{faq.answer}</p>
+                  <p className=" text-gray-600 font-work my-5">{faq.answer}</p>
                 )}
               </div>
             ))}

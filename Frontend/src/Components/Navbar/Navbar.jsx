@@ -3,77 +3,73 @@ import { CiSearch } from "react-icons/ci";
 import { FaShoppingBag } from "react-icons/fa";
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCartThin } from "react-icons/pi";
+import { NavLink, Link } from "react-router-dom";
 import ResponsiveMenu from "./ResponsiveMenu";
 
 const Navbar = () => {
   const NavbarMenu = [
     {
-      id: 1,
       title: "Home",
-      link: "/",
+      path: "/home",
     },
     {
-      id: 2,
       title: "Shop",
-      link: "#",
+      path: "/shop",
     },
+
     {
-      id: 3,
-      title: "Products",
-      link: "#",
-    },
-    {
-      id: 4,
       title: "Blogs",
-      link: "#",
+      path: "/blogs",
     },
     {
-      id: 5,
       title: "Contact",
-      link: "#",
+      path: "/contact",
     },
   ];
 
   const [open, setOpen] = useState(false);
   return (
-    <section>
-      <nav>
-        <div className="container flex justify-between items-center py-4">
+    <>
+      <nav className="sticky top-0 z-50 bg-white shadow-md">
+        <div className="container flex justify-between items-center py-4 px-16">
           {/* Logo Section */}
-          <div className="text-2xl flex items-center gap-2 font-bold uppercase">
+          <div className="text-2xl flex gap-3">
             <FaShoppingBag />
-            <p>Sanchita</p>
-            <p className="text-secondary">Enterprises</p>
+            <p className="font-cormorant uppercase font-medium tracking-wide">
+              Sanchita Enterprises
+            </p>
           </div>
           {/* Menu Section */}
           <div className="hidden md:block">
             <ul className="flex items-center gap-6 text-gray-600">
-              {NavbarMenu.map((item) => {
+              {NavbarMenu.map((item, index) => {
                 return (
-                  <li key={item.id}>
-                    <a
-                      href={item.link}
-                      className="inline-block py-1 px-3 hover:text-primary font-semibold"
+                  <li key={index}>
+                    <NavLink
+                      to={item.path}
+                      className="inline-block px-2 hover:underline font-work text-base font-medium"
                     >
                       {item.title}
-                    </a>
+                    </NavLink>
                   </li>
                 );
               })}
             </ul>
           </div>
+
           {/* Icons Section */}
           <div className="flex items-center gap-4">
-            <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
+            <button className="text-2xl hover:bg-black hover:text-white rounded-full p-2 duration-200">
               <CiSearch />
             </button>
-            <button className="text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200">
+            <button className="text-2xl hover:bg-black hover:text-white rounded-full p-2 duration-200">
               <PiShoppingCartThin />
             </button>
-            <button className="hover:bg-primary text-primary font-semibold hover:text-white rounded-md border-2 border-primary px-6 py-2 duration-200 hidden md:block">
+            <button className="w-24 h-10 text-center font-medium font-work text-[#202025] border-[1px] border-[#202025] rounded-md hover:bg-[#202025] hover:text-white hidden md:block">
               Login
             </button>
           </div>
+
           {/* Mobile hamburder Menu Section */}
           <div className="md:hidden" onClick={() => setOpen(!open)}>
             <MdMenu className="text-4xl cursor-pointer" />
@@ -83,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile Sidebar section */}
       <ResponsiveMenu open={open} />
-    </section>
+    </>
   );
 };
 

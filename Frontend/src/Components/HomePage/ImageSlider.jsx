@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import carousel_pic2 from "./../../assets/carousel_pic2.webp";
 import CarouselPic1 from "./../../assets/CarouselPic1.jpg";
+import CarouselPic2 from "./../../assets/CarouselPic2.jpg";
 import { FiChevronLeft } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const ImageSlider = () => {
-  const images = [carousel_pic2, CarouselPic1];
+  const images = [CarouselPic1, CarouselPic2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -29,7 +29,7 @@ const TextTicker = () => {
             <img src={ticker_img} alt="" className="text-center w-10 h-10" />
             <p
               key={item.id}
-              className="text-center text-lg text-white uppercase p-4 m-auto"
+              className="text-center font-work text-lg text-white uppercase p-4 m-auto"
             >
               {item.msg}
             </p>

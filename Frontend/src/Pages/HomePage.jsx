@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Components/Header/Navbar";
+import Navbar from "../Components/Navbar/Navbar";
 import ImageSlider from "../Components/HomePage/ImageSlider";
 import TextTicker from "../Components/HomePage/TextTicker";
 import NewArrivals from "../Components/HomePage/NewArrivals";
