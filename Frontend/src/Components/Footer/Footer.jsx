@@ -2,33 +2,36 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-800 py-8">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-8">
+    <footer className="font-work text-[#202025] py-20 px-8">
+      <div className="flex gap-8">
         {/* Contact Us */}
-        <div>
-          <h3 className="font-bold text-lg mb-4">CONTACT US</h3>
+        <div className="w-1/4">
+          <h3 className="font-semibold text-base mb-8">CONTACT US</h3>
           <p>
             Email:{" "}
-            <a href="mailto:clientcare@oak.com" className="text-gray-600">
+            <a
+              href="mailto:sanchitaupadhyay1973@gmail.com"
+              className="text-gray-600"
+            >
               clientcare@oak.com
             </a>
           </p>
           <p>
             Phone:{" "}
-            <a href="tel:18888383022" className="text-gray-600">
-              1.888.838.3022
+            <a href="tel:6354178148" className="text-gray-600">
+              6354178148
             </a>
           </p>
           <p>
-            Hours: Monday – Thursday: 9AM – 7PM ET, <br />
-            Friday: 9AM – 5PM ET
+            Hours: Monday – Thursday: 9AM – 7PM IST, <br />
+            Friday: 9AM – 5PM IST
           </p>
         </div>
 
         {/* Information */}
-        <div>
-          <h3 className="font-bold text-lg mb-4">INFORMATION</h3>
-          <ul className="space-y-2">
+        <div className="w-1/5">
+          <h3 className="font-semibold text-base mb-8">INFORMATION</h3>
+          <ul className="space-y-3 font-normal text-[#202025]">
             <li>
               <a href="#" className="hover:underline">
                 My Account
@@ -41,7 +44,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Wishlist
+                Safety Guidelines
               </a>
             </li>
             <li>
@@ -58,12 +61,12 @@ const Footer = () => {
         </div>
 
         {/* Custom Care */}
-        <div>
-          <h3 className="font-bold text-lg mb-4">CUSTOM CARE</h3>
-          <ul className="space-y-2">
+        <div className="w-1/5">
+          <h3 className="font-semibold text-base mb-8">CUSTOM CARE</h3>
+          <ul className="space-y-3">
             <li>
               <a href="#" className="hover:underline">
-                Search
+                Help Center
               </a>
             </li>
             <li>
@@ -73,7 +76,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Returns
+                Returns & Refunds
               </a>
             </li>
             <li>
@@ -83,21 +86,16 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Brands
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Gift Vouchers
+                FAQs
               </a>
             </li>
           </ul>
         </div>
 
         {/* Collections */}
-        <div>
-          <h3 className="font-bold text-lg mb-4">COLLECTIONS</h3>
-          <ul className="space-y-2">
+        <div className="w-1/4">
+          <h3 className="font-semibold text-base mb-8">COLLECTIONS</h3>
+          <ul className="space-y-3">
             <li>
               <a href="#" className="hover:underline">
                 Shop All
@@ -105,22 +103,22 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="hover:underline">
-                AcneProne
+                Dyeing Agents
               </a>
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Aging Skin
+                Finishing Chemicals
               </a>
             </li>
             <li>
               <a href="#" className="hover:underline">
-                All Skin Types
+                Printing Chemicals
               </a>
             </li>
             <li>
               <a href="#" className="hover:underline">
-                Bundles
+                Auxiliary Chemicals
               </a>
             </li>
           </ul>
@@ -128,45 +126,25 @@ const Footer = () => {
 
         {/* Newsletter */}
         <div>
-          <h3 className="font-bold text-lg mb-4">
-            GET GOOD SKIN AND GOOD EMAILS.
+          <h3 className="font-medium text-[28px] font-cormorant mb-6">
+            ENHANCE PERFORMANCE AND STAY INFORMED.
           </h3>
           <p className="text-gray-600 mb-4">
-            Sign up for private sales, new launches, style tips, and more.
+            Sign up for exclusive deals, product updates, expert tips, and more.
           </p>
           <form>
             <input
               type="email"
               placeholder="Your email"
-              className="w-full border border-gray-300 rounded-md px-4 py-2 mb-2"
+              className="w-full border h-12 border-gray-300 rounded-md px-4 py-2 mb-3"
             />
             <button
               type="submit"
-              className="w-full bg-gray-800 text-white rounded-md py-2 hover:bg-gray-700"
+              className="w-2/5 h-12 bg-gray-800 text-white rounded-md py-2 hover:bg-gray-700"
             >
               SUBSCRIBE
             </button>
           </form>
-          <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <i className="fab fa-pinterest"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <i className="fab fa-youtube"></i>
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
-              <i className="fab fa-tiktok"></i>
-            </a>
-          </div>
         </div>
       </div>
     </footer>

@@ -33,11 +33,13 @@ const Navbar = () => {
       <nav className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container flex justify-between items-center py-4 px-16">
           {/* Logo Section */}
-          <div className="text-2xl flex gap-3">
-            <FaShoppingBag />
-            <p className="font-cormorant uppercase font-medium tracking-wide">
-              Sanchita Enterprises
-            </p>
+          <div className="text-2xl flex items-center gap-3">
+            <Link to="/home" className="flex items-center gap-2">
+              <FaShoppingBag />
+              <p className="font-cormorant uppercase font-medium tracking-wide">
+                Nikita Enterprises
+              </p>
+            </Link>
           </div>
           {/* Menu Section */}
           <div className="hidden md:block">
@@ -47,7 +49,7 @@ const Navbar = () => {
                   <li key={index}>
                     <NavLink
                       to={item.path}
-                      className="inline-block px-2 hover:underline font-work text-base font-medium"
+                      className="inline-block px-2 uppercase hover:underline font-work text-sm font-medium"
                     >
                       {item.title}
                     </NavLink>
@@ -65,9 +67,13 @@ const Navbar = () => {
             <button className="text-2xl hover:bg-black hover:text-white rounded-full p-2 duration-200">
               <PiShoppingCartThin />
             </button>
-            <button className="w-24 h-10 text-center font-medium font-work text-[#202025] border-[1px] border-[#202025] rounded-md hover:bg-[#202025] hover:text-white hidden md:block">
-              Login
-            </button>
+
+            {/* Login Button */}
+            <Link to="/login">
+              <button className="w-24 h-10 text-center font-medium font-work text-[#202025] border-[1px] border-[#202025] rounded-md hover:bg-[#202025] hover:text-white hidden md:block">
+                Login
+              </button>
+            </Link>
           </div>
 
           {/* Mobile hamburder Menu Section */}

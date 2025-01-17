@@ -2,39 +2,34 @@ import React from "react";
 import category_pic from "./../../assets/category_pic.webp";
 import { motion } from "motion/react";
 
-const ShopByCategories = () => {
+const Categories = () => {
   const CategoryList = [
     {
-      id: 1,
       img: category_pic,
       title: "Dyeing Agents",
     },
     {
-      id: 2,
       img: category_pic,
       title: "Printing Chemicals",
     },
     {
-      id: 3,
       img: category_pic,
       title: "Finishing Agents",
     },
     {
-      id: 4,
       img: category_pic,
       title: "Pretreatment Chemicals",
     },
     {
-      id: 5,
       img: category_pic,
       title: "Auxiliary Chemicals",
     },
   ];
   return (
-    <section className="overflow-hidden relative bg-[#f9f7f0]">
-      <div className="mx-20 my-12">
+    <div>
+      <div className="mx-20 my-10">
         {/* Heading Section */}
-        <div className="mb-12">
+        <div className="mb-10">
           <p className="text-[#7e7e84] font-work uppercase mb-2">
             Explore Cadiant
           </p>
@@ -44,22 +39,27 @@ const ShopByCategories = () => {
         </div>
 
         {/* Images Section */}
-        <div className="h-72 flex gap-4">
+        <div className="flex gap-8">
           {CategoryList.map((item, index) => (
-            <div key={index} className="relative overflow-hidden">
+            <div key={index} className="relative text-center">
               <motion.img
-                src={item.img}
+                src={category_pic}
                 alt={item.title}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.1, ease: "easeInOut" }}
+                className="w-full h-full object-cover"
               />
-              <p className="text-center p-2">{item.title}</p>
+              <div className="absolute inset-0 bg-black opacity-30"></div>
+              {/* Centered Content */}
+              <div className="absolute flex flex-col inset-0 items-center justify-center">
+                <p className="font-work font-normal text-base text-white">
+                  {item.title}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ShopByCategories;
+export default Categories;

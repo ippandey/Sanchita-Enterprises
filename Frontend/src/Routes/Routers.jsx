@@ -5,6 +5,8 @@ import Shop from "../Pages/Shop";
 import ProductPage from "../Pages/ProductPage";
 import CartPage from "../Pages/CartPage";
 import CheckoutPage from "../Pages/CheckoutPage";
+import Login from "../Pages/Login";
+import Signup from "../Pages/Signup";
 
 const Routers = () => {
   return (
@@ -15,6 +17,8 @@ const Routers = () => {
       <Route path="/product/:id" element={<ProductPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Signup />} />
     </Routes>
   );
 };

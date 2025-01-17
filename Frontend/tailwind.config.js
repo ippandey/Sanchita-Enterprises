@@ -7,6 +7,12 @@ export default {
         cormorant: ["Cormorant", "serif"],
         work: ["Work Sans", "sans-serif"],
       },
+      height: {
+        90: "90vh",
+        80: "80vh",
+        75: "75vh",
+        60: "60vh",
+      },
     },
   },
   plugins: [],
