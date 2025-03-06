@@ -6,27 +6,27 @@ const FAQ = () => {
     {
       question: "What is your return policy?",
       answer:
-        "We offer a 30-day return policy for unused items in their original packaging.",
+        "We offer a 30-day return policy for unused and unopened products in their original packaging. Please contact our support team to initiate a return.",
     },
     {
       question: "What Are Your Products Made",
       answer:
-        'We want you to be completely satisfied with your purchase. If for any reason you are not, you can return any item in its original condition within 30 days of receipt for a full refund or exchange. Please ensure that the products have all original tags and packaging. To initiate a return, visit our "Returns" page and follow the instructions provided. Remember to keep your receipt as proof of purchase. Some exclusions may apply, so be sure to check our detailed return policy for more information.',
+        "Our products are formulated using high-quality raw materials, ensuring efficiency and compliance with industry standards. Each product comes with a detailed specification sheet.",
     },
     {
       question: "How can I track my order?",
       answer:
-        "Once your order is shipped, we will send you a tracking number via email.",
+        'Once your order is dispatched, you will receive a tracking link via email. You can also track your order status in the "My Orders" section of your account.',
     },
     {
-      question: "What is your return policy?",
+      question: "How should I store the chemicals?",
       answer:
-        "We offer a 30-day return policy for unused items in their original packaging.",
+        "Our products should be stored in a cool, dry place, away from direct sunlight and moisture. Refer to the product label for specific storage guidelines.",
     },
     {
-      question: "What is your return policy?",
+      question: "Are your products environmentally friendly?",
       answer:
-        "We offer a 30-day return policy for unused items in their original packaging.",
+        "We strive to use eco-friendly formulations wherever possible and ensure our products meet safety and environmental regulations.",
     },
   ];
 

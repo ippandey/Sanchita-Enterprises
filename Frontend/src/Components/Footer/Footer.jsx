@@ -13,7 +13,7 @@ const Footer = () => {
               href="mailto:sanchitaupadhyay1973@gmail.com"
               className="text-gray-600"
             >
-              clientcare@oak.com
+              clientcare@se.com
             </a>
           </p>
           <p>

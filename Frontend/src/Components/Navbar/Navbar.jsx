@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link to="/home" className="flex items-center gap-2">
               <FaShoppingBag />
               <p className="font-cormorant uppercase font-medium tracking-wide">
-                Nikita Enterprises
+                Sanchita Enterprises
               </p>
             </Link>
           </div>
@@ -64,9 +64,11 @@ const Navbar = () => {
             <button className="text-2xl hover:bg-black hover:text-white rounded-full p-2 duration-200">
               <CiSearch />
             </button>
-            <button className="text-2xl hover:bg-black hover:text-white rounded-full p-2 duration-200">
-              <PiShoppingCartThin />
-            </button>
+            <Link to="/cart">
+              <button className="text-2xl hover:bg-black hover:text-white rounded-full p-2 duration-200">
+                <PiShoppingCartThin />
+              </button>
+            </Link>
 
             {/* Login Button */}
             <Link to="/login">

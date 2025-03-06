@@ -58,7 +58,7 @@ const Testimonials = () => {
   return (
     <section className="overflow-hidden relative bg-[#f9f6f1]">
       <div className="m-20">
-        <h2 className="text-3xl font-medium text-center m-20">
+        <h2 className="text-[44px] font-medium font-cormorant text-center m-20">
           What Our Clients Say
         </h2>
         <div className="relative">
@@ -69,9 +69,15 @@ const Testimonials = () => {
                 key={testimonial.id}
                 className="bg-white p-6 rounded-lg shadow-lg w-1/3 flex flex-col items-center text-center"
               >
-                <p className="italic text-gray-600">"{testimonial.review}"</p>
-                <h4 className="mt-4 font-bold text-lg">{testimonial.name}</h4>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                <p className="italic text-gray-600 font-work">
+                  "{testimonial.review}"
+                </p>
+                <h4 className="mt-4 font-semibold text-lg font-work">
+                  {testimonial.name}
+                </h4>
+                <p className="text-sm text-gray-500 font-work">
+                  {testimonial.role}
+                </p>
               </div>
             ))}
           </div>

@@ -1,98 +1,146 @@
-import React from "react";
-import prod1_1 from "./../../assets/prod1_1.webp";
-import prod1_2 from "./../../assets/prod1_2.webp";
+import { React, useState } from "react";
+import products from "../../data/products";
+import { FaStar, FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const BestSeller = () => {
-  const BestSellerCard = [
-    {
-      id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
-      title: "Versed Skin",
-      productName: "Total Transformation",
-      stars: 2,
-      price: 4,
-      originalPrice: 5,
-      sale: 10,
-    },
-    {
-      id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
-      title: "Versed Skin",
-      productName: "Total Transformation",
-      stars: 2,
-      price: 4,
-      originalPrice: 5,
-      sale: 10,
-    },
-    {
-      id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
-      title: "Versed Skin",
-      productName: "Total Transformation",
-      stars: 2,
-      price: 4,
-      originalPrice: 5,
-      sale: 10,
-    },
-    {
-      id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
-      title: "Versed Skin",
-      productName: "Total Transformation",
-      stars: 2,
-      price: 4,
-      originalPrice: 5,
-      sale: 10,
-    },
-    {
-      id: 1,
-      img1: prod1_1,
-      img2: prod1_2,
-      title: "Versed Skin",
-      productName: "Total Transformation",
-      stars: 2,
-      price: 4,
-      originalPrice: 5,
-      sale: 10,
-    },
-  ];
+  const fiveStarProducts = products.filter((product) => product.ratings >= 4.5);
+  const BestSellerList = fiveStarProducts.slice(0, 5);
+  const [hoveredProductId, setHoveredProductId] = useState(null);
+
   return (
     <section className="overflow-hidden relative">
       <div className="m-20">
         {/* Heading section */}
-        <div className="mb-8">
-          <p className="text-[#7e7e84] font-semibold uppercase mb-4">
-            Angel Skin
-          </p>
-          <h1 className="text-4xl">Best Seller Skin</h1>
-        </div>
+        <motion.div
+          className="mb-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
+        >
+          <motion.p
+            className="text-[#7e7e84] font-work text-sm uppercase mb-4"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: "easeOut" },
+              },
+            }}
+          >
+            Trusted Products
+          </motion.p>
+
+          <motion.h1
+            className="text-[44px] font-cormorant capitalize text-[#202025]"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: "easeOut" },
+              },
+            }}
+          >
+            Best Seller Chemicals
+          </motion.h1>
+        </motion.div>
 
         {/* Products section */}
-        <div className="h-80 flex gap-5">
-          {BestSellerCard.map((item, index) => (
-            <div key={index} className="h-full w-52 bg-[#f7f4f3]">
-              <img src={item.img1} className="" />
-              <p
-                className="uppercase text-sm 
-                   text-gray-500 text-center"
-              >
-                {item.title}
-              </p>
-              <p className="text-lg text-center">{item.productName}</p>
-              <p className="text-center">{item.stars}</p>
-              <p className="flex items-center justify-center gap-2">
-                ${item.price}
-                <span className="text-gray-500 line-through">
-                  ${item.originalPrice}
-                </span>
-              </p>
-            </div>
+        <motion.div
+          className="flex gap-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} //
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } },
+          }}
+        >
+          {BestSellerList.map((product) => (
+            <Link
+              key={product.id}
+              to={`/product/${product.id}`}
+              className="block"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  className="border p-4 shadow-md rounded-lg relative bg-[#f7f4f3]"
+                  onMouseEnter={() => setHoveredProductId(product.id)}
+                  onMouseLeave={() => setHoveredProductId(null)}
+                  variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.6, ease: "easeOut" },
+                    },
+                  }}
+                >
+                  {product.originalPrice > product.price && (
+                    <span className="absolute top-2 left-2 bg-red-500 text-white text-sm px-3 py-1 rounded">
+                      Sale -{" "}
+                      {Math.round(
+                        ((product.originalPrice - product.price) /
+                          product.originalPrice) *
+                          100
+                      )}
+                      %
+                    </span>
+                  )}
+                  {hoveredProductId === product.id && (
+                    <button className="absolute top-44 left-1/2 transform -translate-x-1/2 w-4/5 bg-white text-[#333333] hover:bg-[#333333] hover:text-white px-4 py-2 rounded-sm shadow-md">
+                      Add to Cart
+                    </button>
+                  )}
+                  <img
+                    src={
+                      hoveredProductId === product.id
+                        ? product.gallery[1]
+                        : product.gallery[0]
+                    }
+                    alt={product.title}
+                    className="w-full object-cover mb-4 rounded-md transition-all"
+                  />
+                  <h3 className="text-lg font-medium text-center font-work text-[#333333]">
+                    {product.title}
+                  </h3>
+                  <p className="text-[#555555] font-work text-center mb-2 text-sm">
+                    {product.category}
+                  </p>
+                  <p className="text-[#666666] text-base flex justify-center gap-4 mb-4">
+                    <span className="flex gap-[2px]">
+                      {Array.from({ length: 5 }).map((_, index) =>
+                        index < product.ratings ? (
+                          <FaStar key={index} className="text-[#333333]" />
+                        ) : (
+                          <FaRegStar
+                            key={index}
+                            className="text-[#666666] rounded-sm"
+                          />
+                        )
+                      )}
+                    </span>
+                  </p>
+                  <div className="flex gap-2 items-center justify-center mb-2">
+                    <span className="text-xl font-semibold text-[#333333] font-work">
+                      ₹{product.price}
+                    </span>
+                    {product.originalPrice > product.price && (
+                      <span className="font-semibold text-[#666666] font-work line-through">
+                        ₹{product.originalPrice}
+                      </span>
+                    )}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </Link>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

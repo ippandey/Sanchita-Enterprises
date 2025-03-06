@@ -13,6 +13,9 @@ export default {
         75: "75vh",
         60: "60vh",
       },
+      colors: {
+        primaryBlack: "#333333",
+      },
     },
   },
   plugins: [],

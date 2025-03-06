@@ -1,251 +1,33 @@
 import React, { useState } from "react";
-import prod1_1 from "./../../assets/prod1_1.webp";
-import prod1_2 from "./../../assets/prod1_2.webp";
+import products from "../../data/products";
+import { FaStar, FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const categories = [
   {
-    id: "category1",
-    name: "Dying Agents",
-    products: [
-      {
-        id: 1,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Dying Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 2,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Dying Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 3,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Dying Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 4,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Dying Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 5,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Dying Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-    ],
+    id: 1,
+    name: "Dyeing Agents",
+    products: products.filter((product) => product.category === "Dye"),
   },
   {
-    id: "category2",
-    name: "Printing Chemicals",
-    products: [
-      {
-        id: 1,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Printing Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 2,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Printing Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 3,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Printing Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 4,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Printing Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 5,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Printing Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-    ],
+    id: 2,
+    name: "Alkaline Agent",
+    products: products.filter(
+      (product) => product.category === "Alkaline Agent"
+    ),
   },
   {
-    id: "category3",
-    name: "Finishing Agents",
-    products: [
-      {
-        id: 1,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Finishing Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 2,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Finishing Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 3,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Finishing Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 4,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Finishing Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 5,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Finishing Agents",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-    ],
+    id: 3,
+    name: "Solvent",
+    products: products.filter((product) => product.category === "Solvent"),
   },
   {
-    id: "category4",
-    name: "Auxiliary Chemicals",
-    products: [
-      {
-        id: 1,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Auxiliary Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 2,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Auxiliary Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 3,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Auxiliary Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 4,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Auxiliary Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-      {
-        id: 5,
-        img1: prod1_1,
-        img2: prod1_2,
-        title: "Auxiliary Chemicals",
-        productName: "Total Transformation",
-        stars: 2,
-        price: 4,
-        originalPrice: 5,
-        sale: 10,
-      },
-    ],
+    id: 4,
+    name: "Bleaching Agent",
+    products: products.filter(
+      (product) => product.category === "Bleaching Agent"
+    ),
   },
 ];
 
@@ -258,12 +40,14 @@ const Essentials = () => {
 
   const currentProducts =
     categories.find((cat) => cat.id === selectedCategory)?.products || [];
+
+  const [hoveredProductId, setHoveredProductId] = useState(null);
   return (
-    <section>
-      <div className="container mb-16">
+    <section className="overflow-hidden relative">
+      <div className="m-20">
         {/* Heading & Buttons Section */}
-        <div className="h-40 items-center justify-center p-8 m-8">
-          <h2 className="text-center mb-8 text-5xl font-medium">
+        <div className="items-center justify-center mb-8">
+          <h2 className="text-center font-cormorant mb-8 text-[44px] font-medium">
             Our Essentials
           </h2>
           <div className="flex items-center justify-center gap-2 mb-6">
@@ -271,7 +55,7 @@ const Essentials = () => {
               <button
                 key={category.id}
                 onClick={() => handleCategoryClick(category.id)}
-                className={`px-3 py-2 text-base font-medium transition-all
+                className={`px-3 py-2 text-base font-work font-medium transition-all
               ${
                 selectedCategory === category.id
                   ? " text-black"
@@ -286,34 +70,58 @@ const Essentials = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="h-80 flex gap-5 mb-8">
-          {currentProducts.map((product, index) => (
-            <div key={index} className="h-full w-52 bg-[#f7f4f3]">
-              <img src={product.img1} />
-              <p
-                className="uppercase text-sm 
-                 text-gray-500 text-center"
-              >
-                {product.title}
-              </p>
-              <p className="text-lg text-center">{product.productName}</p>
-              <p className="text-center">{product.stars}</p>
-              <p className="flex items-center justify-center gap-2">
-                ${product.price}
-                <p className="text-gray-500 line-through">
-                  ${product.originalPrice}
+        <div className="flex gap-5">
+          {currentProducts.map((product) => (
+            <Link
+              key={product.id}
+              to={`/product/${product.id}`}
+              className="block"
+            >
+              <div className="bg-[#f7f4f3] shadow-md rounded-md w-52 mb-10">
+                <img src={product.image} />
+                <h3 className="text-lg font-medium text-center rounded-md font-work text-[#333333]">
+                  {product.title}
+                </h3>
+                <p className="text-[#555555] font-work text-center mb-2 text-sm">
+                  {product.category}
                 </p>
-              </p>
-            </div>
+                <p className="text-[#666666] text-base flex justify-center gap-4 mb-4">
+                  <span className="flex gap-[2px]">
+                    {Array.from({ length: 5 }).map((_, index) =>
+                      index < product.ratings ? (
+                        <FaStar key={index} className="text-[#333333]" />
+                      ) : (
+                        <FaRegStar
+                          key={index}
+                          className="text-[#666666] rounded-sm"
+                        />
+                      )
+                    )}
+                  </span>
+                </p>
+                <div className="flex gap-2 items-center justify-center mb-2">
+                  <span className="text-xl font-semibold text-[#333333] font-work">
+                    ₹{product.price}
+                  </span>
+                  {product.originalPrice > product.price && (
+                    <span className="font-semibold text-[#666666] font-work line-through">
+                      ₹{product.originalPrice}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
 
         {/* Button */}
-        <div className=" flex justify-center">
-          <button className="uppercase text-[#252525] border-[1px] border-[#252525] rounded-md w-36 h-12 hover:bg-[#252525] hover:text-white text-base">
-            Shop All
-          </button>
-        </div>
+        <Link to="/shop">
+          <div className=" flex justify-center">
+            <button className="uppercase text-[#252525] border-[1px] border-[#252525] rounded-md w-36 h-12 hover:bg-[#252525] hover:text-white text-base">
+              Shop All
+            </button>
+          </div>
+        </Link>
       </div>
     </section>
   );

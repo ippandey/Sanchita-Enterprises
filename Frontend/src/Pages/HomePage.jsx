@@ -1,5 +1,4 @@
-import React from "react";
-import Navbar from "../Components/Navbar/Navbar";
+import React, { useRef } from "react";
 import ImageSlider from "../Components/HomePage/ImageSlider";
 import TextTicker from "../Components/HomePage/TextTicker";
 import NewArrivals from "../Components/HomePage/NewArrivals";
@@ -13,7 +12,6 @@ import OurStory from "../Components/HomePage/OurStory";
 import Blogs from "../Components/HomePage/Blogs";
 import Testimonials from "../Components/HomePage/Testimonials";
 import FAQ from "../Components/HomePage/FAQ";
-import Footer from "../Components/Footer/Footer";
 
 const HomePage = () => {
   return (

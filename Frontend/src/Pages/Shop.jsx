@@ -1,21 +1,50 @@
 import React, { useState } from "react";
-import AllProducts from "./../assets/AllProducts.webp";
+import AllProducts from "./../assets/AllProducts.jpg";
 import Categories from "./../Components/ShopPage/Categories";
+import Filters from "../Components/ShopPage/Filters";
+import Products from "../Components/ShopPage/Products";
+import products from "../data/products";
+import { motion } from "framer-motion";
 
 const Shop = () => {
+  const [filters, setFilters] = useState({
+    availability: [],
+    size: [],
+    category: [],
+    price: [0, 100],
+  });
+
+  const handleFilterChange = (updatedFilters) => {
+    setFilters({
+      availability: updatedFilters.availability || [],
+      size: updatedFilters.size || [],
+      category: updatedFilters.category || [],
+      price: updatedFilters.price || [0, 100],
+    });
+  };
+
   return (
     <section className="border-b border-[#202025]">
       {/* Image section */}
-      <div className="h-80 relative text-center">
-        <img
-          src={AllProducts}
-          alt="All Products"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+      <div className="relative text-center overflow-hidden">
+        <motion.div
+          className="w-full h-full"
+          initial={{ scale: 1.2 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 1.2 }}
+          transition={{ duration: 2 }}
+        >
+          <img
+            src={AllProducts}
+            alt="All Products"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
+        <div className="absolute inset-0 bg-black opacity-50"></div>
 
         {/* Breadcrumb */}
-        <div className="absolute top-5 left-6 text-white text-base font-work ">
+        <div className="absolute top-5 left-6 text-white text-base font-work">
           Home / Shop
         </div>
 
@@ -25,8 +54,8 @@ const Shop = () => {
             All Products
           </h3>
           <p className="font-work font-normal text-base text-white">
-            Shop now, not later. Browse the best of our favorite sale styles and
-            brands.
+            Shop now, not later. high-quality solutions tailored for textile
+            manufacturing and other industries.
           </p>
         </div>
       </div>
@@ -35,7 +64,12 @@ const Shop = () => {
       <Categories />
 
       {/* Main Content */}
-      <div className="flex flex-wrap m-20"></div>
+      <div className="flex flex-wrap gap-10 m-16">
+        <Filters onFilterChange={handleFilterChange} />
+        <div className="flex-1">
+          <Products filters={filters} productList={products} />
+        </div>
+      </div>
     </section>
   );
 };
